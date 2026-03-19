@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="🎉 Invitación de cumpleaños de Anna Joaquina - 21 de Marzo 20:00 HS - Quincho 2 Club Remeros, Salto, Uruguay">
+    <meta name="theme-color" content="#4caf50">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:title" content="🎉 Invitación de Cumpleaños - Anna Joaquina">
+    <meta property="og:description" content="¡Estás invitado! 21 de Marzo 20:00 HS - Quincho 2 Club Remeros, Salto, Uruguay">
+    <meta property="og:image" content="">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="">
+    <meta property="twitter:title" content="🎉 Invitación de Cumpleaños - Anna Joaquina">
+    <meta property="twitter:description" content="¡Estás invitado! 21 de Marzo 20:00 HS - Quincho 2 Club Remeros, Salto, Uruguay">
+    <meta property="twitter:image" content="">
+    
+    <!-- WhatsApp específico -->
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/png">
+    
+    <title>🎉 Invitación de Cumpleaños - Anna Joaquina</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #a8e6cf 0%, #7dd3a0 50%, #5cb87a 100%);
+            min-height: 100vh;
+            min-height: -webkit-fill-available;
+            padding: 20px;
+            padding-bottom: env(safe-area-inset-bottom);
+            overflow-x: hidden;
+            position: relative;
+            cursor: default;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+        
+        html {
+            height: -webkit-fill-available;
+        }
+
+        a, button, .soccer-ball {
+            cursor: pointer;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(211, 47, 47, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(25, 118, 210, 0.1) 0%, transparent 50%);
+            animation: backgroundMove 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes backgroundMove {
+            0%, 100% {
+                transform: translate(0, 0);
+            }
+            50% {
+                transform: translate(20px, 20px);
+            }
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .ticket {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+                        0 0 0 1px rgba(211, 47, 47, 0.1);
+            margin-bottom: 60px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+            overflow: hidden;
+        }
+
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .ticket.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            animation: ticketPulse 3s ease-in-out infinite, ticketEntrance 1s ease-out;
+        }
+
+        @keyframes ticketEntrance {
+            0% {
+                transform: translateY(50px) scale(0.8);
+                opacity: 0;
+            }
+            50% {
+                transform: translateY(-10px) scale(1.05);
+            }
+            100% {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+        }
+
+        @keyframes ticketPulse {
+            0%, 100% {
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+                            0 0 0 1px rgba(211, 47, 47, 0.1);
+            }
+            50% {
+                box-shadow: 0 10px 50px rgba(0, 0, 0, 0.3),
+                            0 0 20px rgba(211, 47, 47, 0.2);
+            }
+        }
+
+        /* Bordes festoneados simulados */
+        .ticket::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(to bottom, #a8e6cf 0%, #7dd3a0 50%, #5cb87a 100%);
+            border-radius: 50%;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .ticket-borders::before {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(to bottom, #a8e6cf 0%, #7dd3a0 50%, #5cb87a 100%);
+            border-radius: 50%;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .ticket-glow {
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(211, 47, 47, 0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ticket-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .ticket-header h2 {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 42px;
+            font-weight: bold;
+            color: #d32f2f;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.3),
+                         0 0 10px rgba(211, 47, 47, 0.5),
+                         0 0 20px rgba(211, 47, 47, 0.3);
+            margin-bottom: 30px;
+            line-height: 1.1;
+            animation: glow 2s ease-in-out infinite alternate;
+            position: relative;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.3),
+                            0 0 10px rgba(211, 47, 47, 0.5),
+                            0 0 20px rgba(211, 47, 47, 0.3);
+            }
+            to {
+                text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.3),
+                            0 0 15px rgba(211, 47, 47, 0.8),
+                            0 0 30px rgba(211, 47, 47, 0.5),
+                            0 0 40px rgba(211, 47, 47, 0.3);
+            }
+        }
+
+        .event-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .event-details {
+            flex: 1;
+        }
+
+        .date-time {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .date-time:hover {
+            color: #d32f2f;
+            transform: translateX(5px);
+        }
+
+        .date-time::before {
+            content: '📅';
+            margin-right: 8px;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .date-time:nth-of-type(2)::before {
+            content: '⏰';
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+
+        .location {
+            font-size: 18px;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            position: relative;
+            display: inline-block;
+        }
+
+        .location:hover {
+            color: #d32f2f;
+            transform: translateX(5px);
+        }
+
+        .location::before {
+            content: '📍';
+            margin-right: 8px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        .age-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding-left: 20px;
+            border-left: 3px dashed #d32f2f;
+            min-width: 120px;
+        }
+
+        .age-number {
+            font-size: 72px;
+            font-weight: bold;
+            color: #000;
+            line-height: 1;
+        }
+
+        .age-text {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d32f2f;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .decorations {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            top: 0;
+            left: 0;
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 60px;
+            height: 70px;
+        }
+
+        .logo-shield {
+            width: 100%;
+            height: 100%;
+            background: #1976d2;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-stripe {
+            position: absolute;
+            width: 100%;
+            height: 8px;
+            background: white;
+            transform: rotate(-45deg);
+            top: 50%;
+            left: 0;
+        }
+
+        .logo-text {
+            position: relative;
+            z-index: 2;
+            color: #d32f2f;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .trophy {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 60px;
+        }
+
+        .trophy-base {
+            width: 100%;
+            height: 15px;
+            background: #ffd700;
+            border-radius: 3px;
+            margin-top: 45px;
+        }
+
+        .trophy-stem {
+            width: 8px;
+            height: 30px;
+            background: #ffd700;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .trophy-cup {
+            width: 40px;
+            height: 35px;
+            background: #ffd700;
+            border-radius: 20px 20px 5px 5px;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .trophy-cup::before {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background: repeating-linear-gradient(
+                45deg,
+                #000 0px,
+                #000 5px,
+                #fff 5px,
+                #fff 10px
+            );
+            border-radius: 50%;
+            top: 5px;
+            left: 5px;
+        }
+
+        .barcode {
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .barcode-line {
+            background: #000;
+            height: 20px;
+            width: 100%;
+        }
+
+        .barcode-line:nth-child(odd) {
+            width: 60%;
+        }
+
+        .barcode-line:nth-child(even) {
+            width: 80%;
+        }
+
+        .grass {
+            position: absolute;
+            bottom: -40px;
+            left: 0;
+            width: 100%;
+            height: 80px;
+            background: #4caf50;
+            clip-path: polygon(
+                0% 100%,
+                5% 80%,
+                10% 100%,
+                15% 75%,
+                20% 95%,
+                25% 85%,
+                30% 100%,
+                35% 70%,
+                40% 90%,
+                45% 100%,
+                50% 75%,
+                55% 95%,
+                60% 85%,
+                65% 100%,
+                70% 80%,
+                75% 90%,
+                80% 100%,
+                85% 75%,
+                90% 95%,
+                95% 85%,
+                100% 100%
+            );
+            animation: grassWave 3s ease-in-out infinite;
+        }
+
+        @keyframes grassWave {
+            0%, 100% {
+                clip-path: polygon(
+                    0% 100%,
+                    5% 80%,
+                    10% 100%,
+                    15% 75%,
+                    20% 95%,
+                    25% 85%,
+                    30% 100%,
+                    35% 70%,
+                    40% 90%,
+                    45% 100%,
+                    50% 75%,
+                    55% 95%,
+                    60% 85%,
+                    65% 100%,
+                    70% 80%,
+                    75% 90%,
+                    80% 100%,
+                    85% 75%,
+                    90% 95%,
+                    95% 85%,
+                    100% 100%
+                );
+            }
+            50% {
+                clip-path: polygon(
+                    0% 100%,
+                    5% 75%,
+                    10% 100%,
+                    15% 80%,
+                    20% 90%,
+                    25% 100%,
+                    30% 75%,
+                    35% 85%,
+                    40% 100%,
+                    45% 70%,
+                    50% 90%,
+                    55% 100%,
+                    60% 80%,
+                    65% 95%,
+                    70% 100%,
+                    75% 75%,
+                    80% 90%,
+                    85% 100%,
+                    90% 80%,
+                    95% 95%,
+                    100% 100%
+                );
+            }
+        }
+
+        .soccer-ball {
+            position: absolute;
+            bottom: -60px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            border: 3px solid #000;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .soccer-ball:hover {
+            transform: scale(1.2) rotate(360deg);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .soccer-ball::after {
+            content: '';
+            position: absolute;
+            top: -5px;
+            left: -5px;
+            width: calc(100% + 10px);
+            height: calc(100% + 10px);
+            border-radius: 50%;
+            border: 2px solid rgba(211, 47, 47, 0.3);
+            animation: pulseRing 2s ease-out infinite;
+        }
+
+        @keyframes pulseRing {
+            0% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
+
+        .soccer-ball::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: 
+                radial-gradient(circle at 30% 30%, #000 2px, transparent 2px),
+                radial-gradient(circle at 70% 30%, #000 2px, transparent 2px),
+                radial-gradient(circle at 30% 70%, #000 2px, transparent 2px),
+                radial-gradient(circle at 70% 70%, #000 2px, transparent 2px),
+                radial-gradient(circle at 50% 50%, #000 2px, transparent 2px);
+            background-size: 100% 100%;
+        }
+
+        .yellow-bar {
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 15px;
+            height: 100%;
+            background: #ffc107;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .location-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+                        0 0 0 1px rgba(211, 47, 47, 0.1);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .location-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(211, 47, 47, 0.05) 0%, transparent 70%);
+            animation: rotate 25s linear infinite reverse;
+            pointer-events: none;
+        }
+
+        .location-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+            animation: locationPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes locationPulse {
+            0%, 100% {
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2),
+                            0 0 0 1px rgba(211, 47, 47, 0.1);
+            }
+            50% {
+                box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3),
+                            0 0 20px rgba(211, 47, 47, 0.15);
+            }
+        }
+
+        .location-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #d32f2f;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.3);
+            animation: titleShine 3s ease-in-out infinite;
+            position: relative;
+        }
+
+        @keyframes titleShine {
+            0%, 100% {
+                text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.3);
+            }
+            50% {
+                text-shadow: 2px 2px 8px rgba(211, 47, 47, 0.6),
+                            0 0 15px rgba(211, 47, 47, 0.4);
+            }
+        }
+
+        .location-info {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .location-name {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .location-address {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .map-container {
+            width: 100%;
+            height: 300px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .map-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, transparent 100%);
+            pointer-events: none;
+            z-index: 1;
+            border-radius: 15px;
+        }
+
+        .map-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+
+        .map-container:hover iframe {
+            transform: scale(1.05);
+        }
+
+        .location-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background: #d32f2f;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+        }
+
+        .location-link:hover {
+            background: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(211, 47, 47, 0.4);
+        }
+
+        .decorations .logo,
+        .decorations .trophy {
+            transition: transform 0.3s ease-out;
+        }
+
+        .ticket.visible .logo {
+            animation: slideInLeft 0.8s ease-out 0.2s both;
+        }
+
+        .ticket.visible .trophy {
+            animation: slideInRight 0.8s ease-out 0.4s both;
+        }
+
+        .soccer-ball {
+            transition: transform 0.3s ease-out;
+            opacity: 0;
+        }
+
+        .soccer-ball.animate {
+            animation: bounceIn 1s ease-out 0.6s both;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes bounceIn {
+            0% {
+                opacity: 0;
+                transform: scale(0.3) translateY(50px);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.05) translateY(-10px);
+            }
+            70% {
+                transform: scale(0.9) translateY(5px);
+            }
+            100% {
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease-out;
+        }
+
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Confetti y partículas */
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: #d32f2f;
+            animation: confettiFall linear forwards;
+            z-index: 1000;
+            pointer-events: none;
+            border-radius: 2px;
+        }
+
+        .confetti:nth-child(1) { left: 10%; animation-duration: 3s; background: #d32f2f; }
+        .confetti:nth-child(2) { left: 20%; animation-duration: 4s; background: #ffd700; }
+        .confetti:nth-child(3) { left: 30%; animation-duration: 3.5s; background: #1976d2; }
+        .confetti:nth-child(4) { left: 40%; animation-duration: 4.5s; background: #d32f2f; }
+        .confetti:nth-child(5) { left: 50%; animation-duration: 3s; background: #4caf50; }
+        .confetti:nth-child(6) { left: 60%; animation-duration: 4s; background: #ffd700; }
+        .confetti:nth-child(7) { left: 70%; animation-duration: 3.5s; background: #d32f2f; }
+        .confetti:nth-child(8) { left: 80%; animation-duration: 4.5s; background: #1976d2; }
+        .confetti:nth-child(9) { left: 90%; animation-duration: 3s; background: #ffd700; }
+        .confetti:nth-child(10) { left: 15%; animation-duration: 4s; background: #4caf50; }
+
+        @keyframes confettiFall {
+            0% {
+                transform: translateY(-100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* Estrellas decorativas */
+        .star {
+            position: absolute;
+            color: #ffd700;
+            font-size: 20px;
+            animation: twinkle 2s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        .star:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+        .star:nth-child(2) { top: 20%; right: 20%; animation-delay: 0.5s; }
+        .star:nth-child(3) { bottom: 30%; left: 10%; animation-delay: 1s; }
+        .star:nth-child(4) { bottom: 20%; right: 15%; animation-delay: 1.5s; }
+        .star:nth-child(5) { top: 50%; left: 5%; animation-delay: 0.3s; }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.3;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+
+        /* Efectos hover mejorados */
+        .age-number {
+            transition: all 0.3s ease;
+            cursor: default;
+        }
+
+        .age-number:hover {
+            transform: scale(1.1) rotate(5deg);
+            color: #d32f2f;
+        }
+
+        .trophy {
+            transition: transform 0.3s ease;
+        }
+
+        .trophy:hover {
+            transform: scale(1.1) rotate(-10deg);
+        }
+
+        .logo:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Partículas flotantes */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(211, 47, 47, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) translateX(0);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-100px) translateX(50px);
+            }
+        }
+
+        /* Efecto de brillo en el ticket */
+        .ticket-shine {
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.4),
+                transparent
+            );
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100%;
+            }
+            100% {
+                left: 100%;
+            }
+        }
+
+        /* Decoración de números flotantes */
+        .floating-number {
+            position: absolute;
+            font-size: 100px;
+            font-weight: bold;
+            color: rgba(211, 47, 47, 0.1);
+            z-index: 0;
+            pointer-events: none;
+            animation: floatNumber 4s ease-in-out infinite;
+        }
+
+        @keyframes floatNumber {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(5deg);
+            }
+        }
+
+        /* Optimizaciones para WhatsApp y móviles */
+        .whatsapp-view .ticket,
+        .whatsapp-view .location-section {
+            animation-duration: 0.5s;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .name {
+                font-size: 32px;
+            }
+
+            .age-number {
+                font-size: 56px;
+            }
+
+            .age-text {
+                font-size: 20px;
+            }
+
+            .date-time {
+                font-size: 18px;
+            }
+
+            .location {
+                font-size: 16px;
+            }
+
+            .ticket {
+                padding: 30px 20px;
+                margin-bottom: 40px;
+            }
+
+            .logo {
+                width: 50px;
+                height: 60px;
+            }
+
+            .trophy {
+                width: 40px;
+                height: 50px;
+            }
+
+            .location-section {
+                padding: 30px 20px;
+                margin: 30px 0;
+            }
+
+            .location-title {
+                font-size: 24px;
+            }
+
+            .location-name {
+                font-size: 20px;
+            }
+
+            .location-address {
+                font-size: 16px;
+            }
+
+            .map-container {
+                height: 250px;
+            }
+
+            /* Reducir animaciones en móviles para mejor rendimiento */
+            .confetti {
+                display: none;
+            }
+
+            .particle {
+                display: none;
+            }
+        }
+
+        /* Optimización para pantallas muy pequeñas */
+        @media (max-width: 400px) {
+            .name {
+                font-size: 28px;
+            }
+
+            .age-number {
+                font-size: 48px;
+            }
+
+            .ticket {
+                padding: 20px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Confetti -->
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+    <div class="confetti"></div>
+
+    <div class="container">
+        <div class="ticket ticket-borders">
+            <div class="ticket-glow"></div>
+            <div class="ticket-shine"></div>
+            <div class="floating-number" style="top: 20px; right: 50px;">11</div>
+            <div class="decorations">
+                <div class="logo">
+                    <div class="logo-shield">
+                        <div class="logo-stripe"></div>
+                        <div class="logo-text">C.N.<br>de F.</div>
+                    </div>
+                </div>
+                <div class="trophy">
+                    <div class="trophy-cup"></div>
+                    <div class="trophy-stem"></div>
+                    <div class="trophy-base"></div>
+                </div>
+                <div class="barcode">
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                    <div class="barcode-line"></div>
+                </div>
+                <div class="yellow-bar"></div>
+            </div>
+            
+            <div class="ticket-header">
+                <h2>PASE PARA EL CUMPLE DE</h2>
+                <div class="name">ANNA JOAQUINA</div>
+            </div>
+
+            <div class="event-info">
+                <div class="event-details">
+                    <div class="date-time">21 DE MARZO</div>
+                    <div class="date-time">20:00 HS</div>
+                    <div class="location">QUINCHO 2 CLUB REMEROS</div>
+                </div>
+                <div class="age-section">
+                    <div class="age-number">11</div>
+                    <div class="age-text">AÑOS</div>
+                </div>
+            </div>
+            
+            <!-- Estrellas decorativas -->
+            <div class="star">⭐</div>
+            <div class="star">⭐</div>
+            <div class="star">⭐</div>
+            <div class="star">⭐</div>
+            <div class="star">⭐</div>
+        </div>
+        
+        <div class="grass"></div>
+        <div class="soccer-ball"></div>
+    </div>
+
+    <div class="container">
+        <div class="location-section">
+            <h2 class="location-title">📍 Ubicación</h2>
+            <div class="location-info">
+                <div class="location-name">QUINCHO 2 CLUB REMEROS</div>
+                <div class="location-address">Club Remeros</div>
+                <div class="location-address">Salto, Uruguay</div>
+            </div>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3368.5!2d-57.9606!3d-31.3883!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDIzJzE3LjkiUyA1N8KwNTcnMzguMiJX!5e0!3m2!1ses!2suy!4v1234567890123!5m2!1ses!2suy"
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div style="text-align: center;">
+                <a href="https://maps.google.com/?q=Club+Remeros+Salto+Uruguay" target="_blank" class="location-link">
+                    Abrir en Google Maps
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Función para detectar cuando los elementos entran en el viewport
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Animar pelota cuando el ticket se vuelve visible
+                    if (entry.target.classList.contains('ticket')) {
+                        const soccerBall = document.querySelector('.soccer-ball');
+                        if (soccerBall) {
+                            setTimeout(() => {
+                                soccerBall.classList.add('animate');
+                            }, 600);
+                        }
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Detectar si viene de WhatsApp y optimizar
+        function detectWhatsApp() {
+            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            if (/whatsapp/i.test(userAgent)) {
+                document.body.classList.add('whatsapp-view');
+                // Prevenir zoom en iOS
+                let lastTouchEnd = 0;
+                document.addEventListener('touchend', function (event) {
+                    const now = (new Date()).getTime();
+                    if (now - lastTouchEnd <= 300) {
+                        event.preventDefault();
+                    }
+                    lastTouchEnd = now;
+                }, false);
+            }
+        }
+        detectWhatsApp();
+
+        // Observar todos los elementos con animación
+        document.addEventListener('DOMContentLoaded', () => {
+            // Forzar que el ticket sea visible inmediatamente si está en viewport
+            const ticket = document.querySelector('.ticket');
+            if (ticket) {
+                const rect = ticket.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    ticket.classList.add('visible');
+                    const soccerBall = document.querySelector('.soccer-ball');
+                    if (soccerBall) {
+                        setTimeout(() => {
+                            soccerBall.classList.add('animate');
+                        }, 600);
+                    }
+                }
+            }
+            
+            const animatedElements = document.querySelectorAll('.ticket, .location-section');
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+
+            // Crear partículas flotantes
+            function createParticles() {
+                const container = document.querySelector('.ticket');
+                if (!container) return;
+                
+                for (let i = 0; i < 15; i++) {
+                    const particle = document.createElement('div');
+                    particle.className = 'particle';
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 6 + 's';
+                    particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
+                    container.appendChild(particle);
+                }
+            }
+            createParticles();
+
+            // Efecto de confetti continuo
+            function createConfetti() {
+                const confettiContainer = document.body;
+                const colors = ['#d32f2f', '#ffd700', '#1976d2', '#4caf50', '#ff9800'];
+                
+                setInterval(() => {
+                    const confetti = document.createElement('div');
+                    confetti.className = 'confetti';
+                    confetti.style.left = Math.random() * 100 + '%';
+                    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                    confetti.style.animationDuration = (Math.random() * 2 + 2) + 's';
+                    confetti.style.width = (Math.random() * 8 + 6) + 'px';
+                    confetti.style.height = confetti.style.width;
+                    confettiContainer.appendChild(confetti);
+                    
+                    setTimeout(() => {
+                        confetti.remove();
+                    }, 5000);
+                }, 300);
+            }
+            createConfetti();
+
+            // Efecto parallax suave en elementos decorativos
+            window.addEventListener('scroll', () => {
+                const scrollY = window.pageYOffset;
+                
+                // Parallax en elementos decorativos
+                const logo = document.querySelector('.logo');
+                const trophy = document.querySelector('.trophy');
+                const soccerBall = document.querySelector('.soccer-ball');
+                
+                if (logo) {
+                    const logoRect = logo.getBoundingClientRect();
+                    if (logoRect.top < window.innerHeight && logoRect.bottom > 0) {
+                        const parallaxValue = scrollY * 0.2;
+                        logo.style.transform = `translateY(${parallaxValue}px)`;
+                    }
+                }
+                
+                if (trophy) {
+                    const trophyRect = trophy.getBoundingClientRect();
+                    if (trophyRect.top < window.innerHeight && trophyRect.bottom > 0) {
+                        const parallaxValue = scrollY * 0.15;
+                        trophy.style.transform = `translateY(${parallaxValue}px)`;
+                    }
+                }
+                
+                if (soccerBall) {
+                    const ballRect = soccerBall.getBoundingClientRect();
+                    if (ballRect.top < window.innerHeight && ballRect.bottom > 0) {
+                        const parallaxValue = scrollY * 0.25;
+                        soccerBall.style.transform = `translateY(${parallaxValue}px) rotate(${scrollY * 0.1}deg)`;
+                    }
+                }
+            });
+
+        });
+    </script>
+</body>
+</html>
